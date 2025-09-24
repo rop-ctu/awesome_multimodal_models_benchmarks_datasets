@@ -1,3 +1,202 @@
+# Awesome Robotics Datasets, Benchmarks & Models
+
+Curated list of simulation and real-world datasets for robot learning, plus benchmarks, simulators, and notable models.
+
+## Table of Contents
+- [Other Awesome Lists](#other-awesome-lists)
+- [Datasets](#datasets)
+  - [Simulated](#simulated)
+  - [Real-World](#real-world)
+  - [Combined (Sim + Real)](#combined-sim--real)
+  - [Dataset Collections](#dataset-collections)
+- [Benchmarks](#benchmarks)
+- [Physics-Based Simulation Frameworks](#physics-based-simulation-frameworks)
+- [Models](#models)
+- [To Add](#to-add)
+
+---
+
+## Other Awesome Lists
+
+- [Awesome-VLA-Robotics](https://github.com/ksDreamer/Awesome-VLA-Robotics)  
+- [Awesome-VLA-Papers](https://github.com/Psi-Robot/Awesome-VLA-Papers)  
+- [Awesome-VLA](https://github.com/Orlando-CS/Awesome-VLA)  
+- [awesome-ai-robotics](https://github.com/tc-huang/awesome-ai-robotics)  
+- [Awesome-Robot-Learning](https://github.com/RayYoh/Awesome-Robot-Learning)  
+- [Awesome-Implicit-NeRF-Robotics](https://github.com/zubair-irshad/Awesome-Implicit-NeRF-Robotics)  
+- [awesome-robotics-datasets](https://mint-lab.github.io/awesome-robotics-datasets/)  
+- [awesome-isaac-gym](https://github.com/robotlearning123/awesome-isaac-gym)  
+- [awesome-robotics](https://github.com/ahundt/awesome-robotics)  
+- [awesome-robotics papers](https://github.com/ahundt/awesome-robotics/blob/master/papers.md)  
+- [awesome-robotics-libraries](http://jslee02.github.io/awesome-robotics-libraries/)  
+- [awesome-human-robot-interaction](https://github.com/Po-Jen/awesome-human-robot-interaction)  
+- [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning)
+
+---
+
+# Datasets
+
+## Simulated
+
+| Name | Year | Size | Modalities | Robots / Env | Org | Format | Links |
+|------|------|------|------------|--------------|-----|--------|-------|
+| **BEHAVIOR-1k** | 2025 | 50 tasks / 10k demos | 🖼️ RGB-D, segm. · 🤖 state, action, task info | Galaxea R1 | Stanford | LeRobot (parquet) | 🌐 [Project](https://behavior.stanford.edu/challenge/index.html) · 📄 [Paper](https://arxiv.org/abs/2403.09227) · 💾 [Data](https://huggingface.co/datasets/behavior-1k/2025-challenge-demos) |
+| **DexMimicGen** | 2025 | 21k demos / 9 tasks | 🖼️ images · 🤖 state, action | GR-1 humanoid, bimanual Panda + dexterous hand| NVIDIA, UT Austin, UCSD | HDF5 | 🌐 [Project](https://dexmimicgen.github.io/) · 📄 [Paper](https://arxiv.org/abs/2410.24185) · 💾 [Data](https://huggingface.co/datasets/MimicGen/dexmimicgen_datasets/tree/main) |
+| **LeRobot (Meta-World+)** | 2025 | 50 manipulation tasks | 🖼️ RGB-D · 🤖 action, env state | Sawyer | Farma Foundation, LeRobot | LeRobot (parquet) | 🌐 [Project](https://meta-world.github.io/) · 💾 [Data](https://huggingface.co/datasets/lerobot/metaworld_mt50) |
+| **ManiSkill 3** *(in progress)* | 2024 | 16 envs | 🖼️ RGB-D, point clouds · 🤖 demos (teleop & planning) | Unitree G1/H1, Panda, UR10e, Allegro, XArm, … | UCSD (SU Lab) | HDF5, JSON | 🌐 [Project](https://www.maniskill.ai/) · 📄 [Paper](https://arxiv.org/abs/2410.00425) · 💾 [Data](https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations) |
+| **LIBERO** | 2023 | 130 tasks | 🖼️ RGB · 🤖 proprio, action · 🗣️ language specs | Franka Panda | UT Austin, Tsinghua | HDF5 | 🌐 [Project](https://libero-project.github.io/datasets) · 📄 [Paper](https://arxiv.org/abs/2306.03310) · 💾 [Data](https://libero-project.github.io/datasets) |
+| **Habitat (2.0 / 3.0)** | 2023 | Nav/EQA/VLN/Rearrange | 🖼️ scene assets · 🗣️ language ann. · 🤖 actions | Fetch, virtual agents | FAIR, Georgia Tech, UC Berkeley, SFU, Intel | JSON | 🌐 [2.0](https://aihabitat.org/) · 📄 [2.0 Paper](https://arxiv.org/abs/2106.14405) · 🌐 [3.0](https://aihabitat.org/habitat3/) · 📄 [3.0 Paper](https://arxiv.org/abs/2310.13724) · 💾 [Data](https://huggingface.co/ai-habitat) |
+| **MimicGen** | 2023 | 48k demos / 12 tasks | 🖼️ images · 🤖 state, action, task obs | Panda, Sawyer, IIWA, UR5e | UT Austin | HDF5 | 🌐 [Project](https://mimicgen.github.io/) · 📄 [Paper](https://arxiv.org/abs/2310.17596) · 💾 [Data](https://huggingface.co/datasets/amandlek/mimicgen_datasets) |
+| **ManiSkill 2** | 2023 | 20 tasks | 🖼️ RGB-D, point cloud · 🤖 state/action (replay) | Franka Panda | UCSD, Tsinghua | HDF5, JSON | 🌐 [Project](https://maniskill2.github.io/) · 📄 [Paper](https://arxiv.org/abs/2302.04659) · 💾 [Data](https://huggingface.co/datasets/haosulab/ManiSkill2) |
+| **CALVIN** | 2022 | 24h play / 4 envs | 🖼️ RGB-D · 🗣️ language · 🤖 TCP action, state · 🤏 tactile (image) | Franka Panda | Univ. Freiburg | NumPy | 🌐 [Project](http://calvin.cs.uni-freiburg.de/) · 📄 [Paper](https://arxiv.org/abs/2112.03227) · 💾 [Data](https://github.com/mees/calvin/tree/main/dataset) |
+| **RLBench (Perceiver-Actor)** | 2022 | 18 pregenerated tasks (example) | 🖼️ multi-view RGB, depth, masks · 🤖 episode variation | Franka (sim) | UW, NVIDIA | PNG, pickle | 🌐 [PerAct](https://peract.github.io/) · 📄 [PerAct Paper](https://arxiv.org/abs/2209.05451) · 🌐 [RLBench](https://sites.google.com/view/rlbench) · 📄 [RLBench Paper](https://arxiv.org/abs/1909.12271) · 💾 [Data](https://huggingface.co/datasets/hqfang/rlbench-18-tasks) |
+| **MoMaRT** (Mobile Manip. RoboTurk) | 2021 | 1.2k demos / 5 tasks | 🖼️ RGB-D, LIDAR · 🤖 object state, action, rewards | Fetch | Stanford | HDF5 | 🌐 [Project](https://sites.google.com/view/il-for-mm/home) · 📄 [Paper](https://arxiv.org/abs/2112.05251) · 💾 [Data](https://sites.google.com/view/il-for-mm/datasets#h.ko0ilbky4y5u) |
+| **BEHAVIOR-100** | 2021 | 500 VR demos | 🖼️ RGB-D, segm. · 🤖 proprio, agent action | VR agent | Stanford | HDF5 | 🌐 [Project](https://behavior.stanford.edu/behavior_100/overview.html) · 📄 [Paper](https://arxiv.org/abs/2108.03332) · 💾 [Data](https://behavior.stanford.edu/behavior_100/dataset.html) |
+| **D4RL** (Franka Kitchen, etc.) | 2020 | multi-task | 🤖 robot & scene state | Ant, Hopper, HalfCheetah, Walker2D, Franka | Google, UC Berkeley | HDF5 | 🌐 [Project](https://sites.google.com/view/d4rl-anonymous/) · 📄 [Paper](https://arxiv.org/abs/2004.07219) · 💾 [Data](https://minari.farama.org/datasets/D4RL/kitchen/) |
+| **ALFRED** | 2020 | 8,055 demos / 25,743 language dirs | 🖼️ video, features · 🗣️ language · 🤖 action | AI2-THOR agents | UW, AI2 | JSON, images, MP4, PDDL | 🌐 [Project](https://askforalfred.com/) · 📄 [Paper](https://arxiv.org/abs/1912.01734) · 💾 [Data](https://github.com/askforalfred/alfred/tree/master/data) |
+| **VirtualHome** | 2018 | 2,821 ActivityPrograms / 5,193 SyntheticPrograms | 🖼️ RGB-D · 🗣️ NL desc. · 🤖 pose | Virtual avatars | MIT, Toronto | JSON | 🌐 [Project](http://virtual-home.org/) · 📄 [Paper](http://virtual-home.org/paper/virtualhome.pdf) · 💾 [Data](https://github.com/xavierpuigf/virtualhome/blob/master/virtualhome/dataset/README.md) |
+
+
+<details>
+<summary><i>Notes</i></summary>
+
+- <b>BEHAVIOR-1k</b>: Human-grounded dexterous bimanual manipulation in house-scale scenes; part of the 2025 EAI Challenge.  
+- <b>ManiSkill 3</b>: In development; some envs missing demos.  
+- <b>MimicGen</b>: Auto-synthesizes large-scale demos from few human demos across new scenes/objects/arms.
+</details>
+<details>
+<summary><i>Full paper citations </i></summary>
+    
+- **BEHAVIOR-1k** (2025 BEHAVIOR Challenge), BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation, 2022.12, Conference on Robot Learning. [📄 Paper](https://arxiv.org/abs/2403.09227) [💻 Project Website](https://behavior.stanford.edu/challenge/index.html) [💾 Dataset](https://huggingface.co/datasets/behavior-1k/2025-challenge-demos)
+    
+- **DexMimicGen**, DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning, 2024.10, ICRA 2025. [📄 Paper](https://arxiv.org/abs/2410.24185) [💻 Project Website](https://dexmimicgen.github.io/) [💾 Dataset](https://huggingface.co/datasets/MimicGen/dexmimicgen_datasets/tree/main)
+    
+- **Lerobot (Meta-World+)**, Meta-World+: An Improved, Standardized, RL Benchmark, 2025.05. [📄 Paper](https://arxiv.org/abs/2505.11289) [💻 Project Website](https://meta-world.github.io/) [💾 Dataset](https://huggingface.co/datasets/lerobot/metaworld_mt50)
+    
+- **ManiSkill 3**, A Unified Simulator for Physics-Based Robot Learning, 2024.10. [📄 Paper](https://arxiv.org/abs/2410.00425) [💻 Project Website](https://www.maniskill.ai/) [💾 Dataset](https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations)
+    
+- **LIBERO**, LIBERO: Benchmarking Knowledge Transfer in Lifelong Robot Learning, 2023.06. [📄 Paper](https://arxiv.org/abs/2306.03310) [💻 Project Website](https://libero-project.github.io/datasets) [💾 Dataset](https://libero-project.github.io/datasets)
+    
+- **Habitat**, Habitat: A Platform for Embodied AI Research, 2019, ICCV. [📄 Paper (v2.0)](https://arxiv.org/abs/2106.14405) [📄 Paper (v3.0)](https://arxiv.org/abs/2310.13724) [💻 Project Website](https://aihabitat.org/) [💾 Dataset](https://huggingface.co/ai-habitat)
+    
+- **MimicGen**, MimicGen: Language-guided Data Generation for Imitation Learning, 2023.10. [📄 Paper](https://arxiv.org/abs/2310.17596) [💻 Project Website](https://mimicgen.github.io/) [💾 Dataset](https://huggingface.co/datasets/amandlek/mimicgen_datasets)
+    
+- **ManiSkill 2**, ManiSkill2: A Unified Benchmark for High-Level Robot Manipulation Tasks, 2023.02. [📄 Paper](https://arxiv.org/abs/2302.04659) [💻 Project Website](https://maniskill2.github.io/) [💾 Dataset](https://huggingface.co/datasets/haosulab/ManiSkill2)
+    
+- **CALVIN Dataset**, CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks, 2021.12, IEEE Robotics and Automation Letters. [📄 Paper](https://arxiv.org/abs/2112.03227) [💻 Project Website](http://calvin.cs.uni-freiburg.de/) [💾 Dataset](https://github.com/mees/calvin/tree/main/dataset)
+    
+- **RLBench (Perceiver-Actor Dataset)**, Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation, 2022.09. [📄 Paper](https://arxiv.org/abs/2209.05451) [💻 Project Website](https://peract.github.io/) [💾 Dataset](https://huggingface.co/datasets/hqfang/rlbench-18-tasks)
+    
+- **Mobile Manipulation RoboTurk (MoMaRT)**, Learning Human-Guided Mobile Manipulation, 2021.12. [📄 Paper](https://arxiv.org/abs/2112.05251) [💻 Project Website](https://sites.google.com/view/il-for-mm/home) [💾 Dataset](https://sites.google.com/view/il-for-mm/datasets#h.ko0ilbky4y5u)
+    
+- **BEHAVIOR-100 Dataset**, BEHAVIOR: Benchmark for Everyday Household Activities in Virtual, Interactive, and Ecological Environments, 2021.08, CoRL 2021. [📄 Paper](https://arxiv.org/abs/2108.03332) [💻 Project Website](https://behavior.stanford.edu/behavior_100/overview.html) [💾 Dataset](https://behavior.stanford.edu/behavior_100/dataset.html)
+    
+- **D4RL**, D4RL: Datasets for Deep Data-Driven Reinforcement Learning, 2020.04, ICLR 2021. [📄 Paper](https://arxiv.org/abs/2004.07219) [💻 Project Website](https://sites.google.com/view/d4rl-anonymous/) [💾 Dataset](https://minari.farama.org/datasets/D4RL/kitchen/)
+    
+- **ALFRED**, ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday Tasks, 2019.12. [📄 Paper](https://arxiv.org/abs/1912.01734) [💻 Project Website](https://askforalfred.com/) [💾 Dataset](https://github.com/askforalfred/alfred/tree/master/data)
+    
+- **VirtualHome**, VirtualHome: Simulating Household Activities via a Generative and Interactive Model, 2018.06. [📄 Paper](http://virtual-home.org/paper/virtualhome.pdf) [💻 Project Website](http://virtual-home.org/) [💾 Dataset](https://github.com/xavierpuigf/virtualhome/blob/master/virtualhome/dataset/README.md)
+</details>
+
+---
+
+## Real-World
+
+| Name | Year | Size | Modalities | Robots | Org | Format | Links |
+|------|------|------|------------|--------|-----|--------|-------|
+| **DROID** | 2024 | 564 scenes / 86 tasks | 🖼️ full-HD stereo (3 cams) · 🤖 RLDS trajectories · 🗣️ language *(2025 add-on)* | Franka Panda | 13 univ. (Stanford, Berkeley, Princeton, UW, …) | RLDS | 🌐 [Project](https://droid-dataset.github.io/) · 📄 [Paper](https://arxiv.org/abs/2403.12945) · 💾 [Data](https://colab.research.google.com/drive/1b4PPH4XGht4Jve2xPKMCh-AXXAQziNQa?usp=sharing) |
+| **Mobile ALOHA** | 2024 | 7 tasks | 🖼️ 3 cams (high, L/R wrist) · 🤖 **action**, effort, pose | Mobile base + 2× ViperX 300 (teleop: 2× WidowX 250) | Stanford | HDF5 | 🌐 [Project](https://mobile-aloha.github.io/) · 📄 [Paper](https://arxiv.org/abs/2401.02117) · 💾 [Data](https://drive.google.com/drive/folders/1FP5eakcxQrsHyiWBRDsMRvUfSxeykiDc) |
+| **BridgeData V2** | 2023 | 24 envs / 13 skills | 🖼️ multi-view RGB-D · 🤖 arm trajectories · 🗣️ NL labels | WidowX 250 | Berkeley, Stanford, DeepMind, CMU | HDF5 | 🌐 [Project](https://rail-berkeley.github.io/bridgedata/) · 📄 [Paper](https://arxiv.org/abs/2308.12952) · 💾 [Data](https://rail.eecs.berkeley.edu/datasets/bridge_release/data/) |
+| **RoboSet** | 2023 | 30,050 traj. / 38 tasks | 🖼️ 4 RGB views · 🗣️ instructions · 🤖 proprio | Franka Panda | CMU | HDF5 | 🌐 [Project](https://robopen.github.io/roboset/) · 📄 [Paper](https://arxiv.org/abs/2309.01918) · 💾 [Data](https://github.com/vikashplus/robohive/wiki/7.-Datasets) |
+| **FurnitureBench** | 2023 | 8 furniture tasks / 5,100 demos | 🖼️ wrist + front cams · 🤖 robot state | Franka Panda | KAIST | pickle | 🌐 [Project](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html) · 📄 [Paper](https://arxiv.org/abs/2305.12821) · 💾 [Data](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html) |
+| **RH20T** | 2023 | 110k robot + 110k human demos / 140+ tasks | 🖼️ RGB-D, binocular IR · 🔊 audio · 🤖 proprio · 🤏 tactile · 🗣️ task language | Flexiv, UR5, Franka, KUKA | Shanghai AI Lab, Beihang, SJTU, USyd, UESTC, NJUPT | MP4 + NumPy (tar) | 🌐 [Project](https://rh20t.github.io/) · 📄 [Paper](https://arxiv.org/abs/2307.00595) · 💾 [Data](https://rh20t.github.io/#download) |
+| **Dobb-E (HoNY)** | 2023 | 13h / 22 homes / 109 tasks | 🖼️ RGB + depth video · 🤖 gripper 6D pose, open | Hello Robot Stretch | NYU | custom (video + actions) | 🌐 [Project](https://dobb-e.com/) · 📄 [Paper](https://arxiv.org/abs/2311.16098) · 💾 [Data](https://github.com/notmahi/dobb-e/) |
+| **MT-Opt** | 2021 | 800k+ episodes / 12 tasks | 🖼️ images · 🤖 **actions** | KUKA (×7) | Robotics at Google | Offline RL (TFDS) | 🌐 [Project](https://karolhausman.github.io/mt-opt/) · 📄 [Paper](https://arxiv.org/abs/2104.08212) · 💾 [Data](https://www.tensorflow.org/datasets/catalog/mt_opt) |
+| **RoboNet** | 2019 | ~162k traj. | 🖼️ video · 🤖 action seq., EE pose, gripper state | Sawyer, Franka, KUKA, Baxter, WidowX, Fetch, Google Robot | Berkeley, Stanford, UPenn, CMU | TFRecord | 🌐 [Project](https://www.robonet.wiki/) · 📄 [Paper](https://arxiv.org/abs/1910.11215) · 💾 [Data](https://github.com/SudeepDasari/RoboNet/wiki/Getting-Started) |
+| **BC-Z** | 2021 | 25,877 demos / 100+ tasks / 125h | 🖼️ vision · 🗣️ language · 🤖 **actions** | 12 Google robots (7-DoF) | Google, Berkeley | RLDS (TFDS) | 🌐 [Project](https://sites.google.com/view/bc-z/home) · 📄 [Paper](https://arxiv.org/abs/2202.02005) · 💾 [Data](https://www.kaggle.com/datasets/google/bc-z-robot) |
+
+---
+
+## Combined (Sim + Real)
+
+| Name | Year | Size | Modalities | Robots | Org | Format | Links |
+|------|------|------|------------|--------|-----|--------|-------|
+| **RoboTurk** | 2019 | Real: 2,144 demos · Sim: 1,070 PickPlace / 1,147 NutAssembly | 🖼️ multi-view + depth · 🤖 user control + robot joints | Sawyer | Stanford | HDF5, MP4 | 🌐 [Project](https://roboturk.stanford.edu/index.html) · 📄 [Paper](https://arxiv.org/abs/1811.02790) · 💾 [Real](https://roboturk.stanford.edu/dataset_real.html) · 💾 [Sim](https://roboturk.stanford.edu/dataset_sim.html) |
+| **RoboMimic** | 2021 | 5 tasks / 500 human + 5,400 machine traj. | 🖼️ vision · 🤖 **actions** | Franka | Stanford, UT Austin | HDF5 | 🌐 [Project](https://robomimic.github.io/) · 📄 [Paper](https://arxiv.org/abs/2108.03298) · 💾 [Data](https://robomimic.github.io/docs/datasets/robomimic_v0.1.html) |
+
+---
+
+## Dataset Collections
+
+| Name | Year | Size | Modalities | Robots | Org | Format | Links |
+|------|------|------|------------|--------|-----|--------|-------|
+| **Open-X Embodiment** | 2023 | 71 datasets *(checked 2025-09-15)* | 🖼️ RGB-D · 🗣️ language · 🤖 proprio | Franka, Spot, Stretch, UR5, Sawyer, ViperX, … | ASU, CMU, Columbia, ETH, Google DeepMind, … | RLDS | 🌐 [Project](https://robotics-transformer-x.github.io/) · 📄 [Paper](https://arxiv.org/abs/2310.08864) · 💾 [Datasets (Colab)](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb#scrollTo=N2Efw2aHVfSX) · 📊 [Overview Sheet](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?gid=0#gid=0) |
+
+<details>
+<summary><i>Notes</i></summary>
+Exact modalities/robots vary per dataset; unified download/format (RLDS). SOTA often trained on filtered subsets.
+</details>
+
+---
+
+## Benchmarks
+
+| Name | Year | Sim/Real | Task Type | Simulator / Platform | Metrics | Robots | Org | Other Notes |
+|------|------|----------|-----------|----------------------|---------|--------|-----|-------------|
+| **LIBERO** | 2023 | Sim | 🖼️ vision · 🗣️ language · 🤖 action | RoboSuite | FWT, NBT, AUC | Franka | UT Austin, Tsinghua | Lifelong learning, procedural tasks |
+| **ALOHA** | 2023 | Real | 🖼️ vision · 🤖 action · 🤏 force/tactile | Real robots | Task success, contact accuracy | Low-cost dual-arm (Franka) | Stanford | Bimanual manipulation |
+| **FurnitureBench** | 2023 | Real | 🖼️ vision · 🤖 action | Real Franka | Assembly success, time | Franka | KAIST | Long-horizon assembly |
+| **BEHAVIOR-1K** | 2022 | Sim+Real | 🖼️ vision · 🤖 action | iGibson 2.0 + robots | Task success, diversity | Franka, Fetch, TurtleBot | Stanford | 1,000 household activities |
+| **CALVIN** | 2022 | Real | 🖼️ vision · 🗣️ language · 🤖 action | Real Franka | Success rate, language grounding | Franka | TU Dresden | Language-conditioned manipulation |
+| **Habitat 2.0** | 2021 | Sim+Real | 🖼️ vision · 🗣️ language · 🤖 action | Habitat Sim | Nav success, rearrange | LoCoBot, Fetch | FAIR, Georgia Tech | Rearrangement + embodied tasks |
+| **ALFRED** | 2020 | Sim | 🖼️ vision · 🗣️ language · 🤖 action | AI2-THOR | GC-SR, path length | Virtual agents | AI2 | Instruction following |
+| **RLBench** | 2020 | Sim | 🖼️ vision · 🗣️ language · 🤖 action | PyRep | Task success, generalization | Franka (sim) | Imperial College | Multi-task manipulation |
+| **BEHAVIOR-100** | 2020 | Sim+Real | 🖼️ vision · 🤖 action | iGibson | Task success, diversity | Fetch, LoCoBot | Stanford | Subset of BEHAVIOR-1K |
+| **Meta-World** | 2019 | Sim | 📐 state · 🤖 action | MuJoCo | Success, generalization | Sawyer (sim) | UC Berkeley | Multi-task / meta-RL |
+| **VirtualHome** | 2018 | Sim | 🗣️ language · 🖼️ vision · 🤖 action | Unity3D | Script success, diversity | Avatars | MIT, Stanford | Household activity programs |
+
+---
+
+## Physics-Based Simulation Frameworks
+
+| Framework | Associated Benchmarks & Environments |
+|----------|--------------------------------------|
+| **[NVIDIA Isaac Sim](https://developer.nvidia.com/isaac/sim)** | [BEHAVIOR-1K](https://behavior.stanford.edu/); [ARNOLD](https://arnold-benchmark.github.io/); [Isaac Lab](https://isaac-sim.github.io/IsaacLab/main/index.html) [(ORBIT)](https://isaac-orbit.github.io/); [Isaac Lab Mimic](https://isaac-sim.github.io/IsaacLab/main/source/overview/teleop_imitation.html) |
+| **[NVIDIA Isaac Gym](https://developer.nvidia.com/isaac-gym)** | [FurnitureBench](https://clvrai.github.io/furniture-bench/); [AutoMate](https://bingjietang718.github.io/automate/) |
+| **[MuJoCo](https://github.com/google-deepmind/mujoco)** | [RoboSuite](https://robosuite.ai/) ([RoboMimic](https://robomimic.github.io/), [LIBERO](https://libero-project.github.io/main.html), [MuBlE](https://michaal94.github.io/MuBlE/), [CompoSuite](https://github.com/Lifelong-ML/CompoSuite), [RoboCasa](https://robocasa.ai/)); [Meta-World](https://meta-world.github.io/) ([Continual World](https://sites.google.com/view/continualworld)); [MuJoBan / MuJoXO / MuJoGo](https://github.com/google-deepmind/deepmind-research/tree/master/physics_planning_games); [ALOHA sim](https://github.com/google-deepmind/mujoco_menagerie/tree/main/aloha/), [VLABench](https://vlabench.github.io/); [Gymnasium-Robotics](https://github.com/Farama-Foundation/Gymnasium-Robotics) |
+| **[SAPIEN](https://sapien.ucsd.edu/)** | [ManiSkill 3](https://www.maniskill.ai/); [ManiSkill 2](https://maniskill2.github.io/) ([SimplerEnv](https://simpler-env.github.io/), [ClevrSkills](https://github.com/Qualcomm-AI-research/ClevrSkills), [VLATest](https://github.com/ma-labo/VLATest)) |
+| **[Unity](https://unity.com/)** | [AI2-THOR](https://ai2thor.allenai.org/) ([ManipulaTHOR](https://prior.allenai.org/projects/manipulathor), [ProcTHOR](https://procthor.allenai.org/), [ALFRED](https://askforalfred.com/)) |
+| **[iGibson 2.0](https://svl.stanford.edu/igibson/)** | [BEHAVIOR-100](https://behavior.stanford.edu/behavior_100/overview.html) |
+| **[PyBullet](https://pybullet.org/wordpress/)** | [CausalWorld](https://sites.google.com/view/causal-world/home), [Habitat-Sim](https://github.com/facebookresearch/habitat-sim), [CALVIN](http://calvin.cs.uni-freiburg.de/) |
+| **[CoppeliaSim](https://www.coppeliarobotics.com/)** ([PyRep](https://github.com/stepjam/PyRep)) | [RLBench](https://sites.google.com/view/rlbench) ([AGNOSTOS](https://jiaming-zhou.github.io/AGNOSTOS/)) |
+| **[Webots](https://cyberbotics.com/)** | [deepbots](https://github.com/aidudezzz/deepbots) |
+| **[Drake](https://drake.mit.edu/)** | — |
+| **[Genesis](https://genesis-embodied-ai.github.io/)** | — |
+| **Text-Oriented** | [TextWorld](https://github.com/Microsoft/TextWorld); [ALFWorld](https://alfworld.github.io/); [Tales](https://microsoft.github.io/tale-suite/); [WebShop](https://webshop-pnlp.github.io/); [PCA-Bench](https://arxiv.org/pdf/2310.02071); [PlanBench](https://github.com/karthikv792/LLMs-Planning) |
+
+---
+
+# Models
+
+- **RoboPen** — RoboAgent: Sample-Efficient Manipulation via Semantic Augmentations & Action Chunking (2023-09). 📄 [Paper](https://arxiv.org/abs/2309.01918) · 💻 [Project](https://robopen.github.io/) · 🛠️ [Code](https://robopen.github.io/)  
+- **Octo** — Open-Source Generalist Robot Policy (2024-05). 📄 [Paper](https://www.semanticscholar.org/paper/1d2753d74025e7a71594506623be81f18b073adb) · 🛠️ [Code](https://www.google.com/search?q=https://github.com/octo-robotics/octo)  
+- **Hi Robot** — Hierarchical VLA for Open-Ended Instruction Following (2025-02). 📄 [Paper](https://arxiv.org/abs/2502.19417) · 💻 [Project](https://www.themoonlight.io/en/review/hi-robot-open-ended-instruction-following-with-hierarchical-vision-language-action-models)  
+- **Do As I Can, Not As I Say (SayCan)** (2022-04). 📄 [Paper](https://research.google/pubs/do-as-i-can-not-as-i-say-grounding-language-in-robotic-affordances/) · 💻 [Project](https://say-can.github.io/)  
+- **Gemini Robotics** (2025-03). 📄 [Paper](https://arxiv.org/abs/2503.20020) · 💻 [Project](https://www.google.com/search?q=https://research.google/pubs/gemini-robotics-bringing-ai-into-the-physical-world/)  
+- **RDT-1B** — Diffusion FM for Bimanual Manipulation (2024-10). 📄 [Paper](https://www.alphaxiv.org/overview/2410.07864v1) · 💻 [Project](https://www.google.com/search?q=https://rdt-1b.github.io/)  
+- **RT-X** — Open-X Embodiment + RT-X Models (2023-10). 📄 [Paper](https://arxiv.org/abs/2310.08864) · 💻 [Project](https://robotics-transformer-x.github.io/) · 🛠️ [Code](https://github.com/kyegomez/RT-X)  
+- **pi0** — Physical-Intelligence (2025-02). 📄 [Talk](https://www.youtube.com/watch?v=5mY71rGXAkM) · 💻 [Project](https://physical-intelligence.com/) · 🛠️ [Code](https://github.com/Physical-Intelligence/openpi)  
+- **OpenVLA** (2025-05). 📄 [Paper](https://proceedings.mlr.press/v270/kim25c.html) · 💻 [Project](https://openvla.github.io/) · 🛠️ [HF collection](https://www.google.com/search?q=https://huggingface.co/collections/open-vla)  
+- **MolmoAct** (2025-08). 📄 [Paper](https://arxiv.org/abs/2508.07917) · 💻 [Project](https://www.google.com/search?q=https://allenai.org/molmo/) · 🛠️ [Code](https://github.com/allenai/molmoact)
+
+---
+
+## To Add
+- https://imaei.github.io/project_pages/ario/  
+- https://momagen-rss.github.io/ *(2025-09-16: no code yet)*  
+- https://robo-arena.github.io/
+
+---
 ## Other Awesome Lists
 
 - [Awesome-VLA-Robotics](https://github.com/ksDreamer/Awesome-VLA-Robotics)
@@ -17,7 +216,6 @@
 # Datasets
 
 ## Simulated
-
 | NAME                                                                            | Links                                                                                                                                                                                                                                                                                                                                                                                       | YEAR | SIZE                                                                                                                                                                      | MODALITIES                                                                                                                                                                 | ROBOTS / ENVIRONMENT                                                                                                         | UNIVERSITY / ORG                                                                         | DATA FORMAT                            | NOTES                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BEHAVIOR-1k  (2025 BEHAVIOR Challenge)                                          | 🌐 [Project Website](https://behavior.stanford.edu/challenge/index.html) 📄 [Paper](https://arxiv.org/abs/2403.09227) 💾 [Dataset Download](https://huggingface.co/datasets/behavior-1k/2025-challenge-demos)                                                                                                                                                                               | 2025 | 🧩 50 full-length household tasks <br>🕹️ 10,000 teleoperated demonstrations                                                                                              | 🖼️  RGB, depth, and instance segmentation images<br>🤖 Robot state, action, task information                                                                              | Galaxea R1 robot                                                                                                             | Stanford                                                                                 | LeRobot format (parquet)               | Datasets of  human-grounded  dexterous bimanual manipulations in house-scale scenes part of the [2025 EAI Challenge](https://foundation-models-meet-embodied-agents.github.io/eai_challenge/). |
