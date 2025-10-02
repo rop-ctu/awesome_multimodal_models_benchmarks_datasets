@@ -327,35 +327,68 @@ Curated list of simulation and real-world datasets for robot learning, plus benc
 
 ## Dataset Collections
 
-| **NAME**              | YEAR | SIZE                                     | MODALITIES                                                                | ROBOTS                                                | UNI / ORG                                                                                                                                                                         | Links                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------- | ---- | ---------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Open-X Embodiment** | 2023 | 71 **datasets** (last checked 15.9.2025) | 🖼️ RGB, depth cameras  <br>🗣️ Language annotations<br>🤖 Proprioception | Franka, Spot, Hello Stretch, UR5, Sawyer, ViperX, ... | Arizona State University,<br>Carnegie Mellon University ,Columbia University,<br>ETH Zürich, Google DeepMind, and many [other](https://robotics-transformer-x.github.io/)<br><br> | 🌐 [Website](https://robotics-transformer-x.github.io/)  📄 [Paper](https://arxiv.org/abs/2310.08864)  💾[Data](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb#scrollTo=N2Efw2aHVfSX)📊[Dataset overview](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?gid=0#gid=0) |
+
+| **NAME**                     | YEAR | SIZE                                                       | MODALITIES                                                               | ROBOTS                                                | UNI / ORG                                                                                                                              | Links                                                                                                                                                                                                                                                                                      |
+| ---------------------------- | ---- | ---------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Open-X Embodiment**        | 2023 | 71 **datasets** (last checked 15.9.2025)                   | 🖼️ RGB, depth cameras <br>🗣️ Language annotations<br>🤖 Proprioception | Franka, Spot, Hello Stretch, UR5, Sawyer, ViperX, ... | Arizona State University,<br>Carnegie Mellon University ,Columbia University,<br>ETH Zürich, Google DeepMind, and many [other]<br><br> | 🌐 [Website](https://robotics-transformer-x.github.io/) 📄 [Paper](https://arxiv.org/abs/2310.08864) 💾[Data](https://robotics-transformer-x.github.io/) 📊[Dataset overview](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?gid=0#gid=0)        |
+| **ARIO (All Robots in One)** | 2024 | 258 series, 321,064 tasks <br>$\approx$ 3 million episodes | 🖼️ RGBD cameras <br> Comprehensive sensory modalities                   | (mostly single-armed robots)                          | Peng Cheng Laboratory, Southern University of Science and Technology, Sun Yat-sen University, ARIO Alliance                            | 🌐 [Website](https://imaei.github.io/project_pages/ario/) 📄 [Paper](https://arxiv.org/abs/2408.10899) 💾[Dataset](https://imaei.github.io/project_pages/ario/) 📜[Full Task List](https://imaei.github.io/project_pages/ario/static/agilex%20cobot-magic%20data%20collection%20tasks.pdf) |
+|                              |      |                                                            |                                                                          |                                                       |                                                                                                                                        |                                                                                                                                                                                                                                                                                            |
 
 <details>
-  <summary><i>Additional notes</i></summary>
+
+<summary><i>Additional notes</i></summary>
 
 <table>
-  <thead>
-    <tr>
-      <th><strong>NAME</strong></th>
-      <th>DATA FORMAT</th>
-      <th>NOTES</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Open-X Embodiment</strong></td>
-      <td>RLDS</td>
-      <td>Information about exact modalities and robots in <a href="https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?gid=0#gid=0">google sheet overview</a>. To get SOTA results not all datasets are used (filtering is required). Open-X provides unified download and format of datasets.</td>
-    </tr>
-  </tbody>
+
+<thead>
+
+<tr>
+
+<th><strong>NAME</strong></th>
+
+<th>DATA FORMAT</th>
+
+<th>NOTES</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td><strong>Open-X Embodiment</strong></td>
+
+<td>RLDS</td>
+
+<td>Information about exact modalities and robots in <a href="https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?gid=0#gid=0">google sheet overview</a>. To get SOTA results not all datasets are used (filtering is required). Open-X provides unified download and format of datasets.</td>
+
+</tr>
+
+<tr>
+
+<td><strong>ARIO (All Robots in One)</strong></td>
+
+<td>New standard, unified data format</td>
+
+<td>The dataset is built upon a new standard, combining real-world and simulated data from 258 series to train versatile embodied agents. It includes data converted from Open X-Embodiment.</td>
+
+</tr>
+
+</tbody>
+
 </table>
+
 </details>
 
 <details>
+
 <summary><i>Full paper citations </i></summary>
 
-- **Open-X Embodiment**, Open-X Embodiment: A New Benchmark for Large-Scale Robot Learning, 2023.10. [📄 Paper](https://arxiv.org/abs/2310.08864) [💻 Website](https://robotics-transformer-x.github.io/) [💾 Dataset](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb#scrollTo=N2Efw2aHVfSX)
+- **Open-X Embodiment**, Open-X Embodiment: A New Benchmark for Large-Scale Robot Learning, 2023.10. [📄 Paper](https://arxiv.org/abs/2310.08864) [💻 Website](https://robotics-transformer-x.github.io/) [💾 Dataset](https://robotics-transformer-x.github.io/)
+- **ARIO (All Robots in One)**, All Robots in One: A New Standard and Unified Dataset for Versatile, General-Purpose Embodied Agents, 2024. [📄 Paper](https://arxiv.org/abs/2408.10899) [💻 Website](https://imaei.github.io/project_pages/ario/) [💾 Dataset](https://imaei.github.io/project_pages/ario/)
+
 </details>
 
 ---
@@ -406,17 +439,18 @@ Curated list of simulation and real-world datasets for robot learning, plus benc
 ## Real life
 
 
-| NAME               | YEAR | TASK TYPE             | PLATFORM          | METRICS                           | ROBOTS | UNI / ORG | Links                                                                                                                                                      |
-| ------------------ | ---- | --------------------- | ----------------- | --------------------------------- | ------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **FurnitureBench** | 2023 | 🖼️ Vision, 🤖 Action | Real Franka robot | Assembly success, Completion time | Panda  | KAIST     | [📄 Paper](https://arxiv.org/abs/2305.12821) [💻 Website](https://clvrai.github.io/furniture-bench/) [🛠️ Code](https://clvrai.github.io/furniture-bench/) |
-|                    |      |                       |                   |                                   |        |           |                                                                                                                                                            |
-|                    |      |                       |                   |                                   |        |           |                                                                                                                                                            |
-|                    |      |                       |                   |                                   |        |           |                                                                                                                                                            |
-
+| NAME                                                              | YEAR | TASK TYPE             | PLATFORM               | METRICS                                                                  | ROBOTS | UNI / ORG                                                                                                              | Links                                                                                                                                                               |
+| ----------------------------------------------------------------- | ---- | --------------------- | ---------------------- | ------------------------------------------------------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **RoboArena**                                                     | 2025 | 🖼️ Vision, 🤖 Action | DROID                  | Pairwise preference, LLM/VLM-based analysis, Policy ranking.             | Panda  | UC Berkeley, <br>Stanford, <br>UWashington, <br>UMontreal, <br>NVIDIA, <br>UPenn, <br>UT Austin, <br>Yonsei University | [📄 Paper](https://arxiv.org/abs/2506.18123)<br>💻[Website](https://robo-arena.github.io/)<br>[🛠️ Code](https://github.com/robo-arena/roboarena)                   |
+| **FMB**<br>(**F**unctional <br>**M**anipulation<br>**B**enchmark) | 2024 | 🖼️ Vision, 🤖 Action | 3D printed objects     | Success rate of skills (grasp, rotate, insert), End-to-end task success. | Panda  | UC Berkeley                                                                                                            | [📄 Paper](https://arxiv.org/abs/2401.08553)<br>[💻 Website](https://functional-manipulation-benchmark.github.io/) [🛠️ Code](https://github.com/rail-berkeley/fmb) |
+| **FurnitureBench**                                                | 2023 | 🖼️ Vision, 🤖 Action | *** 3D printed objects | Assembly success, Completion time                                        | Panda  | UC Berkeley,<br>KAIST                                                                                                  | [📄 Paper](https://arxiv.org/abs/2305.12821) [💻 Website](https://clvrai.github.io/furniture-bench/) [🛠️ Code](https://clvrai.github.io/furniture-bench/)          |
+|                                                                   |      |                       |                        |                                                                          |        |                                                                                                                        |                                                                                                                                                                     |
 
 <details>
 <summary><i>Full paper citations </i></summary>
 - **FurnitureBench**, Furniture Bench: A Benchmark for Assembling Furniture with a Robot, 2023.05. [📄 Paper](https://arxiv.org/abs/2305.12821) [💻 Website](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html) [🛠️ Code](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html)
+  - **RoboArena**, Distributed Real-World Evaluation of Generalist Robot Policies, 2025.06. [📄 Paper](https://arxiv.org/abs/2506.18123) [💻 Website](https://robo-arena.github.io/)
+- **FMB**, J. Luo, C. Xu, F. Liu, L. Tan, Z. Lin, J. Wu, P. Abbeel, and S. Levine. FMB: A functional manipulation benchmark for generalizable robotic learning. _arXiv preprint arXiv:2401.08553_, 2024. [📄 Paper](https://arxiv.org/abs/2401.08553) [💻 Website](https://functional-manipulation-benchmark.github.io/)
 </details>
 
 ---
@@ -459,25 +493,24 @@ Curated list of simulation and real-world datasets for robot learning, plus benc
 - **OpenVLA**, OpenVLA: An Open-Source Vision-Language-Action Model, 2025.05. [📄 Paper](https://proceedings.mlr.press/v270/kim25c.html) [💻 Website](https://openvla.github.io/) [🛠️ Code](https://www.google.com/search?q=https://huggingface.co/collections/open-vla)
     
 - **MolmoAct**, MolmoAct: Action Reasoning Models that can Reason in Space, 2025.08. [📄 Paper](https://arxiv.org/abs/2508.07917) [💻 Website](https://www.google.com/search?q=https://allenai.org/molmo/) [🛠️ Code](https://github.com/allenai/molmoact)
-
+	
+- **ManiFlow**, A General Robot Manipulation Policy via Consistency Flow Training, 2025.09. [📄 Paper](https://arxiv.org/abs/2509.01819) [💻 Website](https://maniflow-policy.github.io/)
+    
+- **AutoMate**, Specialist and Generalist Assembly Policies over Diverse Geometries, 2024.07. [📄 Paper](https://arxiv.org/abs/2407.08028) [💻 Website](https://bingjietang718.github.io/automate/) [🛠️ Code](https://github.com/isaac-sim/IsaacGymEnvs/blob/automate/docs/automate.md)
 
 ---
 # Papers to include
 - datasets:
     - Papers without code:
 **[https://momagen-rss.github.io/](https://momagen-rss.github.io/)** (16.9.2025 no code yet)
-    - https://imaei.github.io/project_pages/ario/
 
 - benchmarks:
-    - https://robo-arena.github.io/
-    - https://arxiv.org/abs/2206.10498
-    - J. Luo, C. Xu, F. Liu, L. Tan, Z. Lin, J. Wu, P. Abbeel, and S. Levine. Fmb: A functional manipulation benchmark for generalizable robotic learning. arXiv preprint arXiv:2401.08553, 2024.
-    - https://pubmed.ncbi.nlm.nih.gov/33029555/
-
-- models:
-    - https://arxiv.org/pdf/2509.01819
-
-
-
+	- K. Kimble, K. Van Wyk, J. Falco, E. Messina, Y. Sun, M. Shibata, W. Uemura, and Y. Yokokohji. Benchmarking Protocols for Evaluating Small Parts Robotic Assembly Systems. _IEEE Robotics and Automation Letters_, 5(2), 2020. [📄 Paper](https://pubmed.ncbi.nlm.nih.gov/33029555/) https://www.uml.edu/research/nerve/nist-assembly-task-board-form.aspx
+	- https://arxiv.org/abs/2402.00708
+# TODO
+ - modalities and metrics in benchmarks need to be checked
+ - emojis in table links need fixed brakes to look better
+ - Check **[RoboVerse](https://roboverseorg.github.io/)** for additional sim benchmarks
+ - FInish ario and **BC-Z**
 
 
