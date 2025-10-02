@@ -361,44 +361,28 @@ Curated list of simulation and real-world datasets for robot learning, plus benc
 ---
 ## Benchmarks
 
-| NAME               | YEAR | SIM<br>/ REAL | TASK TYPE                                 | SIMULATOR / PLATFORM | METRICS                                                                                                  | ROBOTS                    | UNI / ORG                   | Links                                                                                                                                                      |
-| ------------------ | ---- | ------------- | ----------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **LIBERO**         | 2023 | Sim           | 🖼️ Vision, 🗣️ Language, 🤖 Action       | RoboSuite            | FWT (forward transfer), NBT (negative backward transfer), and<br>AUC (area under the success rate curve) | Panda                     | UT Austin, Tsinghua Univers | [📄 Paper](https://arxiv.org/abs/2306.03310) [💻 Website](https://libero-project.github.io/datasets) [🛠️ Code](https://libero-project.github.io/datasets) |
-| **FurnitureBench** | 2023 | Real          | 🖼️ Vision, 🤖 Action                     | Real Franka robot    | Assembly success, Completion time                                                                        | Panda                     | KAIST                       | [📄 Paper](https://arxiv.org/abs/2305.12821) [💻 Website](https://clvrai.github.io/furniture-bench/) [🛠️ Code](https://clvrai.github.io/furniture-bench/) |
-| **BEHAVIOR-1K**    | 2022 | Sim+Real      | 🖼️ Vision,<br>🤖 Action                  | iGibson 2.0 + Robots | Task success, Diversity coverage                                                                         | Panda, Fetch, TurtleBot   | Stanford                    | [📄 Paper](https://arxiv.org/abs/2403.09227) [💻 Website](https://behavior.stanford.edu/) [🛠️ Code](https://behavior.stanford.edu/)                       |
-| **CALVIN**         | 2022 | Real          | 🖼️ Vision,<br>🗣️Language,<br>🤖 Action  | Real Franka robots   | Success rate, Language grounding                                                                         | Panda                     | TU Dresden                  | [📄 Paper](https://arxiv.org/abs/2112.03227) [💻 Website](http://calvin.cs.uni-freiburg.de/) [🛠️ Code](https://github.com/mees/calvin)                    |
-| **Habitat 2.0**    | 2021 | Sim+Real      | 🖼️ Vision, <br>🗣️Language,<br>🤖 Action | Habitat Sim          | Navigation success, Rearrangement metrics                                                                | LoCoBot, Fetch            | FAIR, Georgia Tech          | [📄 Paper](https://arxiv.org/abs/2106.14405) [💻 Website](https://aihabitat.org/docs/habitat2/) [🛠️ Code](https://aihabitat.org/docs/habitat2/)           |
-| **ALFRED**         | 2020 | Sim           | 🖼️ Vision,<br>🗣️Language,<br>🤖 Action  | AI2-THOR             | Goal-condition success (GC-SR), Path length                                                              | Virtual agents (AI2-THOR) | Allen Institute for AI      | [📄 Paper](https://arxiv.org/abs/1912.01734) [💻 Website](https://askforalfred.com/) [🛠️ Code](https://askforalfred.com/)                                 |
-| **RLBench**        | 2020 | Sim           | 🖼️ Vision, <br>🗣️Language,<br>🤖 Action | PyRep                | Task success, Generalization                                                                             | Panda                     | Imperial College London     | [📄 Paper](https://arxiv.org/abs/1909.12271) [💻 Website](https://sites.google.com/view/rlbench) [🛠️ Code](https://github.com/stepjam/RLBench)            |
-| **BEHAVIOR-100**   | 2020 | Sim+Real      | 🖼️ Vision,<br>🤖 Action                  | iGibson              | Task success, Diversity coverage                                                                         | Fetch, LoCoBot            | Stanford                    | [📄 Paper](https://arxiv.org/abs/2108.03332) [💻 Website](https://behavior.stanford.edu/) [🛠️ Code](https://github.com/StanfordVL/behavior)               |
-| **Meta-World**     | 2019 | Sim           | 📐 State,<br>🤖 Action                    | MuJoCo               | Success rate, Generalization                                                                             | Sawyer                    | UC Berkeley                 | [📄 Paper](https://arxiv.org/abs/1910.10897) [💻 Website](https://meta-world.github.io/) [🛠️ Code](https://github.com/Farama-Foundation/Metaworld)        |
-| **VirtualHome**    | 2018 | Sim           | 🗣️Language,<br>🖼️ Vision,<br>🤖 Action  | Unity3D              | Script success, Task diversity                                                                           | Virtual agents            | MIT, Stanford               | [📄 Paper](https://arxiv.org/abs/1806.07011) [💻 Website](http://virtual-home.org/) [🛠️ Code](http://virtual-home.org/)                                   |
+## Simulated
 
 
+| NAME             | YEAR | TASK TYPE                                 | SIMULATOR            | METRICS                                                                                                  | ROBOTS                    | UNI <br>/ ORG               | Links                                                                                                                                                      |
+| ---------------- | ---- | ----------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **LIBERO**       | 2023 | 🖼️ Vision, 🗣️ Language, 🤖 Action       | RoboSuite            | FWT (forward transfer), NBT (negative backward transfer), and<br>AUC (area under the success rate curve) | Panda                     | UT Austin, Tsinghua Univers | [📄 Paper](https://arxiv.org/abs/2306.03310) [💻 Website](https://libero-project.github.io/datasets) [🛠️ Code](https://libero-project.github.io/datasets) |
+| **BEHAVIOR-1K**  | 2022 | 🖼️ Vision,<br>🤖 Action                  | iGibson 2.0 + Robots | Task success, Diversity coverage                                                                         | Panda, Fetch, TurtleBot   | Stanford                    | [📄 Paper](https://arxiv.org/abs/2403.09227) [💻 Website](https://behavior.stanford.edu/) [🛠️ Code](https://behavior.stanford.edu/)                       |
+| **CALVIN**       | 2022 | 🖼️ Vision,<br>🗣️Language,<br>🤖 Action  | Real Franka robots   | Success rate, Language grounding                                                                         | Panda                     | TU Dresden                  | [📄 Paper](https://arxiv.org/abs/2112.03227) [💻 Website](http://calvin.cs.uni-freiburg.de/) [🛠️ Code](https://github.com/mees/calvin)                    |
+| **Habitat 2.0**  | 2021 | 🖼️ Vision, <br>🗣️Language,<br>🤖 Action | Habitat Sim          | Navigation success, Rearrangement metrics                                                                | LoCoBot, Fetch            | FAIR, Georgia Tech          | [📄 Paper](https://arxiv.org/abs/2106.14405) [💻 Website](https://aihabitat.org/docs/habitat2/) [🛠️ Code](https://aihabitat.org/docs/habitat2/)           |
+| **ALFRED**       | 2020 | 🖼️ Vision,<br>🗣️Language,<br>🤖 Action  | AI2-THOR             | Goal-condition success (GC-SR), Path length                                                              | Virtual agents (AI2-THOR) | Allen Institute for AI      | [📄 Paper](https://arxiv.org/abs/1912.01734) [💻 Website](https://askforalfred.com/) [🛠️ Code](https://askforalfred.com/)                                 |
+| **RLBench**      | 2020 | 🖼️ Vision, <br>🗣️Language,<br>🤖 Action | PyRep                | Task success, Generalization                                                                             | Panda                     | Imperial College London     | [📄 Paper](https://arxiv.org/abs/1909.12271) [💻 Website](https://sites.google.com/view/rlbench) [🛠️ Code](https://github.com/stepjam/RLBench)            |
+| **BEHAVIOR-100** | 2020 | 🖼️ Vision,<br>🤖 Action                  | iGibson              | Task success, Diversity coverage                                                                         | Fetch, LoCoBot            | Stanford                    | [📄 Paper](https://arxiv.org/abs/2108.03332) [💻 Website](https://behavior.stanford.edu/) [🛠️ Code](https://github.com/StanfordVL/behavior)               |
+| **Meta-World**   | 2019 | 📐 State,<br>🤖 Action                    | MuJoCo               | Success rate, Generalization                                                                             | Sawyer                    | UC Berkeley                 | [📄 Paper](https://arxiv.org/abs/1910.10897) [💻 Website](https://meta-world.github.io/) [🛠️ Code](https://github.com/Farama-Foundation/Metaworld)        |
+| **VirtualHome**  | 2018 | 🗣️Language,<br>🖼️ Vision,<br>🤖 Action  | Unity3D              | Script success, Task diversity                                                                           | Virtual agents            | MIT, Stanford               | [📄 Paper](https://arxiv.org/abs/1806.07011) [💻 Website](http://virtual-home.org/) [🛠️ Code](http://virtual-home.org/)                                   |
+|                  |      |                                           |                      |                                                                                                          |                           |                             |                                                                                                                                                            |
+|                  |      |                                           |                      |                                                                                                          |                           |                             |                                                                                                                                                            |
 
-| NAME               | OTHER NOTES                                                    |
-| ------------------ | -------------------------------------------------------------- |
-| **LIBERO**         | Lifelong learning in decision making and rocedurally generated |
-| **ALOHA**          | Bimanual manipulation benchmark                                |
-| **FurnitureBench** | Long-horizon assembly tasks                                    |
-| **BEHAVIOR-1K**    | 1,000 household activities benchmark                           |
-| **CALVIN**         | Language-conditioned manipulation                              |
-| **Habitat 2.0**    | Rearrangement + embodied AI tasks                              |
-| **ALFRED**         | Instruction-following tasks                                    |
-| **RLBench**        | Multi-task manipulation benchmark                              |
-| **BEHAVIOR-100**   | Subset of BEHAVIOR-1K                                          |
-| **Meta-World**     | Multi-task & meta-RL tasks                                     |
-| **VirtualHome**    | Household activity simulation benchmark                        |
-|                    |                                                                |
+
 
 <details>
 <summary><i>Full paper citations </i></summary>
-
 - **LIBERO**, LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning, 2023.06. [📄 Paper](https://arxiv.org/abs/2306.03310) [💻 Website](https://libero-project.github.io/datasets) [🛠️ Code](https://libero-project.github.io/datasets)
-    
-- **ALOHA**, Mobile ALOHA: A Low-Cost, Full-Body Mobile Robot for Daily Living, 2024.01. [📄 Paper](https://arxiv.org/abs/2401.02117) [💻 Website](https://mobile-aloha.github.io/) [🛠️ Code](https://drive.google.com/drive/folders/1FP5eakcxQrsHyiWBRDsMRvUfSxeykiDc)
-    
-- **FurnitureBench**, Furniture Bench: A Benchmark for Assembling Furniture with a Robot, 2023.05. [📄 Paper](https://arxiv.org/abs/2305.12821) [💻 Website](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html) [🛠️ Code](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html)
     
 - **BEHAVIOR-1K**, BEHAVIOR-1K: A Human-Centered, Embodied AI Benchmark with 1,000 Everyday Activities and Realistic Simulation, 2024.03. [📄 Paper](https://arxiv.org/abs/2403.09227) [💻 Website](https://behavior.stanford.edu/challenge/index.html) [🛠️ Code](https://huggingface.co/datasets/behavior-1k/2025-challenge-demos)
     
@@ -415,6 +399,24 @@ Curated list of simulation and real-world datasets for robot learning, plus benc
 - **Meta-World**, Meta-World: A Benchmark for Evaluating Multi-Task and Meta-Learning in Robotics, 2019.10, ICRA 2020. [📄 Paper](https://arxiv.org/abs/1910.10897) [💻 Website](https://meta-world.github.io/) [🛠️ Code](https://github.com/rlworkgroup/metaworld)
     
 - **VirtualHome**, VirtualHome: Simulating Household Activities via Programs, 2018.06, CVPR 2018. [📄 Paper](http://virtual-home.org/paper/virtualhome.pdf) [💻 Website](http://virtual-home.org/) [🛠️ Code](https://github.com/xavierpuigf/virtualhome)
+
+</details>
+
+---
+## Real life
+
+
+| NAME               | YEAR | TASK TYPE             | PLATFORM          | METRICS                           | ROBOTS | UNI / ORG | Links                                                                                                                                                      |
+| ------------------ | ---- | --------------------- | ----------------- | --------------------------------- | ------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **FurnitureBench** | 2023 | 🖼️ Vision, 🤖 Action | Real Franka robot | Assembly success, Completion time | Panda  | KAIST     | [📄 Paper](https://arxiv.org/abs/2305.12821) [💻 Website](https://clvrai.github.io/furniture-bench/) [🛠️ Code](https://clvrai.github.io/furniture-bench/) |
+|                    |      |                       |                   |                                   |        |           |                                                                                                                                                            |
+|                    |      |                       |                   |                                   |        |           |                                                                                                                                                            |
+|                    |      |                       |                   |                                   |        |           |                                                                                                                                                            |
+
+
+<details>
+<summary><i>Full paper citations </i></summary>
+- **FurnitureBench**, Furniture Bench: A Benchmark for Assembling Furniture with a Robot, 2023.05. [📄 Paper](https://arxiv.org/abs/2305.12821) [💻 Website](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html) [🛠️ Code](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html)
 </details>
 
 ---
@@ -468,6 +470,9 @@ Curated list of simulation and real-world datasets for robot learning, plus benc
 
 - benchmarks:
     - https://robo-arena.github.io/
+    - https://arxiv.org/abs/2206.10498
+    - J. Luo, C. Xu, F. Liu, L. Tan, Z. Lin, J. Wu, P. Abbeel, and S. Levine. Fmb: A functional manipulation benchmark for generalizable robotic learning. arXiv preprint arXiv:2401.08553, 2024.
+    - https://pubmed.ncbi.nlm.nih.gov/33029555/
 
 - models:
     - https://arxiv.org/pdf/2509.01819
