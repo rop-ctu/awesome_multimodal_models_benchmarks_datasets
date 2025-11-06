@@ -523,6 +523,7 @@ Curated list of simulation and real-world datasets for robot learning, plus benc
 	
 
 - benchmarks:
+  - https://arxiv.org/abs/2402.08191
 	- K. Kimble, K. Van Wyk, J. Falco, E. Messina, Y. Sun, M. Shibata, W. Uemura, and Y. Yokokohji. Benchmarking Protocols for Evaluating Small Parts Robotic Assembly Systems. _IEEE Robotics and Automation Letters_, 5(2), 2020. [📄&nbsp;Paper](https://pubmed.ncbi.nlm.nih.gov/33029555/) https://www.uml.edu/research/nerve/nist-assembly-task-board-form.aspx
 	- https://arxiv.org/abs/2103.05140
 	- https://www.nist.gov/el/intelligent-systems-division-73500/robotic-grasping-and-manipulation-assembly/assembly
